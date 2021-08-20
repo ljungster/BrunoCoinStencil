@@ -38,7 +38,7 @@ Here are some brief (alphabetized) explanations for BrunoCoin's main classes. Fo
 
 - Transaction: a record of a transfer of a cryptocurrency from one party to another. It is composed of TransactionInputs and TransactionOutputs.
 
-- TransactionHeap: represents a heap or priority queue for storing transactions
+- TransactionHeap: represents a heap or priority queue for storing transactions.
 
 - TransactionPool: represents all the valid transactions that the miner can mine. It is essentially a wrapper for a TransactionHeap.
 
