@@ -58,7 +58,7 @@ The Miner must then handle the block, which it does by calling HandleBlock(). Th
 
 Suppose that the Miner wins the race to mine the next Block by finding a "winning" nonce. In order for that Block to be on the consensus "main chain," it must be broadcast to the network and validated by other BlockChains.
 
-To make that broadcast happen, the Miner sends its newly created Block to the Node by use of a Go channel (a pipe). The Node then calls HandleMinerBlock(), which adds the Block to its own main chain and then broadcasts the Block to all of its peers. 
+To make that broadcast happen, the Miner sends its newly created Block to the Node by use of a Go channel (a pipe). The Node then calls HandleMinerBlock(), which adds the Block to its own main chain and broadcasts the Block to all of its peers. 
 
 ## Wallet Creates TransactionRequest
 
