@@ -64,6 +64,6 @@ To make that broadcast happen, the Miner sends its newly created Block to the No
 
 When an owner of BrunoCoin wants to transfer their holdings to another party, they must employ the Wallet to do so. The Wallet creates a TransactionRequest, which is the minimum amount of information needed to make a Transaction.
 
-The Wallet must then handle this TransactionRequest by calling HandleTransactionRequest. First, the Wallet sends its TransactionRequest to the BlockChain using a Go channel. The BlockChain then must aggregate enough valid UTXO to use as TransactionInputs by calling getUTXOForAmount(). The Wallet then creates the requisite TransactionOutputs and combines them with the TransactionInputs to make a Transaction. 
+The Wallet must then handle this TransactionRequest by calling HandleTransactionRequest(). First, the Wallet sends its TransactionRequest to the BlockChain using a Go channel. The BlockChain then must aggregate enough valid UTXO to use as TransactionInputs by calling getUTXOForAmount(). The Wallet then creates the requisite TransactionOutputs and combines them with the TransactionInputs to make a Transaction. 
 
 The Wallet adds this newly formed Transaction to its LiminalTransactions, as it does not yet have any proof of work on top it. The Wallet sends the Transaction to the network to be broadcast to other Nodes, which may have their Miners add this Transaction to their TransactionPools.
